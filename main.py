@@ -8,9 +8,12 @@ def count_words(file: str):
     return len(file.split())
 
 try:
-    file_name = os.listdir('put-file-here')[0]
+    files = os.listdir('put-file-here')
+    files = [file for file in files if file != '.gitkeep']
+    file_name = files[0]
     with open(f'put-file-here/{file_name}', 'r') as f:
         file_content = f.read()
+
 except:
     print("No file Found! Please put a file in the 'put-file-here' folder")
 
