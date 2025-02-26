@@ -16,6 +16,7 @@ try:
 
 except:
     print("No file Found! Please put a file in the 'put-file-here' folder")
+    running = False
 
 
 
