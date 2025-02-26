@@ -7,9 +7,15 @@ def count_words(file: str):
     file.replace('\n', ' ')
     return len(file.split())
 
-file_name = os.listdir('put-file-here')[0]
-with open(f'put-file-here/{file_name}', 'r') as f:
-    file_content = f.read()
+try:
+    file_name = os.listdir('put-file-here')[0]
+    with open(f'put-file-here/{file_name}', 'r') as f:
+        file_content = f.read()
+except:
+    print("No file Found! Please put a file in the 'put-file-here' folder")
+
+
+
 
 def remove_punct(file: str):
     punctuation_marks = ['.', ',', '?', '!', ':', ';', "'", '"', '(', ')', '[', ']', '{', '}', '...', '-', '–', '/',
@@ -36,17 +42,12 @@ while running:
         option = input("Please select an option: ")
         try:
             option = int(option)
-            if 0 < option < 7:
+            if 0 < option < 8:
                 valid = True
             else:
                 print("Invalid Choice")
         except TypeError:
             print("Invalid Choice")
-
-    if option == 7:  # exit
-        running = False
-        print("Bye")
-        continue
 
     if option == 1:  # print nr count
         print(count_words(file_content))
@@ -56,6 +57,7 @@ while running:
             f.write(remove_punct(file_content))
             file_content = remove_punct(file_content)
 
+        print('')
         print("Done!")
         print("Check the output folder for the result!")
 
@@ -64,6 +66,7 @@ while running:
             f.write(file_content.lower())
             file_content = file_content.lower()
 
+        print('')
         print("Done!")
         print("Check the output folder for the result!")
 
@@ -72,6 +75,7 @@ while running:
             f.write(file_content.upper())
             file_content = file_content.upper()
 
+        print('')
         print("Done!")
         print("Check the output folder for the result!")
 
@@ -89,7 +93,7 @@ while running:
                 freq_counter[word] += 1
             else:
                 freq_counter[word] = 1
-        freq_sorted = sorted(freq_counter.items(),key=lambda x: x[1],reverse=True)
+        freq_sorted = sorted(freq_counter.items(), key=lambda x: x[1], reverse=True)
 
         valid = False
 
@@ -103,11 +107,18 @@ while running:
 
         print(freq_sorted[:show_x_words])
 
-
-    if option == 6:
+    if option == 6:  # reset file
         file_name = os.listdir('put-file-here')[0]
         with open(f'put-file-here/{file_name}', 'r') as f:
             file_content = f.read()
 
         with open(f'output/{file_name}', 'w') as f:
             f.write(file_content)
+
+        print('')
+        print('File reset successful')
+
+    if option == 7:  # exit
+        running = False
+        print("Bye")
+        continue
