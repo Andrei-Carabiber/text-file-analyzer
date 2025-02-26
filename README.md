@@ -19,7 +19,23 @@ You need at least python 3.x in order for this to run.
 If you don't have it installed follow the next instructions.
 If you have it already just skip to **Running the code**
 
-## Windows
+## Downloading:
+You have to clone this in order to have it on your pc. To do this go to where you want to download this and open a terminal.
+### Normal Clone with Username-Password
+In the terminal run the following command
+```
+git clone https://github.com/your-username/word-counter.git
+```
+Where __your-username__ is your GitHub username.(You will be asked for your username and password)
+### Clone with SSH Key
+In the terminal run the following command
+```
+git@github.com:your-username/word-counter.git
+```
+Make sure you replace __your-username__ with your GitHub username.
+In order to have this work you must set up the SSH key on your PC and on GitHub. With this method you will not be asked
+for credentials.
+## Python on Windows
 
 ### **Step 1: Install Python via the Microsoft Store (Recommended)**
 
@@ -38,7 +54,7 @@ python --version
 ```
 You should see the Python version printed, indicating it's installed correctly.
 
-## MacOS
+## Python on MacOS
 
 ### **Step 1: Install Python via Homebrew (Recommended)**
 1. **Install Homebrew** ( If not already installed). Open terminal and paste
