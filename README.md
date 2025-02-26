@@ -17,7 +17,7 @@ python --version
 ```
 You need at least python 3.x in order for this to run.
 If you don't have it installed follow the next instructions.
-If you have it already just skip on **Running the code**
+If you have it already just skip to **Running the code**
 
 ## Windows
 
