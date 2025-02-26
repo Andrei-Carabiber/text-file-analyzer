@@ -79,7 +79,7 @@ python3 --version
 ```
 
 ## Running the code
-1. Put you .txt file in the put-file-here folder
+1. Put you .txt file in the "put-file-here" folder (Make sure there is only ONE .txt file in the folder)
 2. Open a terminal in the main folder that contains main.py
 3. **WINDOWS** Run the following command:
 ```
@@ -90,3 +90,5 @@ py main.py
 python3 main.py
 ```
 4. Follow the instructions in the terminal
+
+5. If you want to use this again, when you move a new .txt folder in the "put-file-here" folder make sure you delete the old one!
